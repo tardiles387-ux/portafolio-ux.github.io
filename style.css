@@ -1,0 +1,172 @@
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	background: white;
+	color: black;
+	line-height: 1.6;
+}
+
+header {
+	background: black;
+	padding: 20px;
+	text-align: center;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+	gap: 25px;
+	font-weight: bold;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+nav a:hover {
+	opacity: 0.7;
+}
+
+section {
+	padding: 60px 20px;
+	max-width: 1100px;
+	margin: auto;
+	animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; transform: translateY(20px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+/* ====== SOBRE MÍ ====== */
+.about {
+	text-align: center;
+}
+
+.about img {
+	width: 160px;
+	height: 160px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 6px solid;
+	border-color: black;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+}
+
+h2 {
+	font-size: 2rem;
+	margin-bottom: 20px;
+}
+
+/* ====== PROYECTOS ====== */
+.projects {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 25px;
+}
+
+.project {
+	background: #c3c3c3;
+	border-radius: 15px;
+	padding: 15px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	transition: 0.3s;
+}
+
+.project:hover {
+	transform: translateY(-6px);
+	background: violet;
+}
+
+.project img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+/* ====== HABILIDADES ====== */
+.skills-list {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	flex-wrap: wrap;
+}
+
+.skill {
+	background: black;
+	padding: 10px 20px;
+	border-radius: 20px;
+	color: white;
+	font-weight: bold;
+}
+
+.btn-contacto {
+	display: inline-block;
+	margin-top: 15px;
+	background: black;
+	color: white;
+	padding: 12px 22px;
+	border-radius: 8px;
+	font-weight: bold;
+}
+
+.whatsapp-float {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background: #25D366;
+	color: white;
+	padding: 12px 18px;
+	border-radius: 30px;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+	z-index: 999;
+}
+
+.whatsapp-float img {
+	width: 22px;
+	height: 22px;
+}
+
+footer {
+	text-align: center;
+	padding: 20px;
+	background: white;
+	margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+	nav {
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+
+	.project img {
+		height: 180px;
+	}
+
+	section {
+		padding: 50px 15px;
+	}
+
+	.whatsapp-float span {
+		display: none;
+	}
+}
+
